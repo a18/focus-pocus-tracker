@@ -1,0 +1,4 @@
+PyQt5
+plotly
+pynput   # For capturing keyboard/mouse events
+sqlite-utils # For easier SQLite interaction
