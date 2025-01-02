@@ -44,9 +44,9 @@ class FpDatabase:
         self.conn.execute(query)
         self.conn.commit()
 
-    def insert_log(self, event_type, details):
-        query = 'INSERT INTO activity_logs (event_type, details) VALUES (?, ?)'
-        self.conn.execute(query, (event_type, details))
+    def insert_log(self, timestamp: str, event_type: str, details: str):
+        query = 'INSERT INTO activity_logs (timestamp, event_type, details) VALUES (?, ?, ?)'
+        self.conn.execute(query, (timestamp, event_type, details))
         self.conn.commit()
 
     def close(self):
